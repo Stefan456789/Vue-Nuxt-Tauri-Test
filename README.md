@@ -1,6 +1,6 @@
-# Nuxt 3 Minimal Starter
+# Nuxt & Tauri Example App
 
-Look at the [Nuxt 3 documentation](https://nuxt.com/docs/getting-started/introduction) to learn more.
+Look at the [Nuxt 3 documentation](https://nuxt.com/docs/getting-started/introduction) and the [Tauri documentation](https://tauri.app/v1/guides/) to learn more.
 
 ## Setup
 
@@ -20,22 +20,17 @@ yarn install
 bun install
 ```
 
-## Development Server
-
-Start the development server on `http://localhost:3000`:
+## Development App
 
 ```bash
 # npm
-npm run dev
+npm run tauri dev
 
 # pnpm
-pnpm run dev
-
-# yarn
-yarn dev
+pnpm run tauri dev
 
 # bun
-bun run dev
+bun run tauri dev
 ```
 
 ## Production
@@ -44,32 +39,12 @@ Build the application for production:
 
 ```bash
 # npm
-npm run build
+npm run tauri build
 
 # pnpm
-pnpm run build
-
-# yarn
-yarn build
+pnpm run tauri build
 
 # bun
-bun run build
+bun run tauri build
 ```
 
-Locally preview production build:
-
-```bash
-# npm
-npm run preview
-
-# pnpm
-pnpm run preview
-
-# yarn
-yarn preview
-
-# bun
-bun run preview
-```
-
-Check out the [deployment documentation](https://nuxt.com/docs/getting-started/deployment) for more information.
