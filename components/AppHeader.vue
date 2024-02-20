@@ -22,6 +22,9 @@
             About
           </NuxtLink>
         </li>
+        <li class="p-2 items-end">
+          <DarkModeButton />
+        </li>
       </ul>
     </nav>
   </header>
