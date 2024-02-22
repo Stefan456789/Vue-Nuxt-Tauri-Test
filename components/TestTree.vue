@@ -1,6 +1,5 @@
 <script setup lang="ts">
-import { ref } from 'vue'
-const data = ['A', 'B', 'C', 'D', 'E']
+const data = ['🚀', '⚡', '☁️', '🛠', '🦾', '🔋']
 const items = ref(data)
 
 function removeItem (toRemove: string) {
@@ -46,15 +45,15 @@ const [parent] = useAutoAnimate()
       Click emojis to remove them.
     </h3>
     <div>
-      <button class="mr-4 px-1 rounded bg-slate-300" @click="sortAsc">
+      <v-btn class="mr-4 px-1" @click="sortAsc">
         Sort A-Z ↑
-      </button>
-      <button class="mr-4 px-1 rounded bg-slate-300" @click="sortDesc">
+      </v-btn>
+      <v-btn class="mr-4 px-1" @click="sortDesc">
         Sort Z-A ↓
-      </button>
-      <button class="mr-4 px-1 rounded bg-slate-300" @click="reset">
+      </v-btn>
+      <v-btn class="mr-4 px-1" @click="reset">
         Reset
-      </button>
+      </v-btn>
     </div>
     <ul ref="parent">
       <li
@@ -62,16 +61,12 @@ const [parent] = useAutoAnimate()
         :key="item"
         class="mx-4"
       >
-        <span @click="removeItem(item)">
+        <v-chip @click="removeItem(item)">
           {{ item }}
-        </span>
+        </v-chip>
 
-        <button :index="index" class="bg-slate-300 rounded p-1 m-1" @click="moveUp">
-          ↑
-        </button>
-        <button :index="index" class="bg-slate-300 rounded p-1 m-1" @click="moveDown">
-          ↓
-        </button>
+        <v-btn :index="index" class="p-1 m-1" icon="mdi-arrow-up-thick" @click="moveUp" />
+        <v-btn :index="index" class="p-1 m-1" icon="mdi-arrow-down-thick" @click="moveDown" />
       </li>
     </ul>
   </div>

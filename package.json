@@ -13,6 +13,7 @@
   "dependencies": {
     "@formkit/auto-animate": "^0.8.1",
     "@tauri-apps/api": "^1.5.3",
+    "@vueuse/nuxt": "^10.8.0",
     "nuxt": "^3.10.2",
     "vue": "^3.4.19",
     "vue-router": "^4.2.5"
@@ -23,6 +24,7 @@
     "@nuxtjs/eslint-module": "^4.1.0",
     "@nuxtjs/tailwindcss": "^6.11.4",
     "@tauri-apps/cli": "^1.5.10",
-    "eslint": "^8.56.0"
+    "eslint": "^8.56.0",
+    "vuetify-nuxt-module": "^0.11.0"
   }
 }
