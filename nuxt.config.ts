@@ -7,6 +7,10 @@ export default defineNuxtConfig({
     '@vueuse/nuxt',
     'vuetify-nuxt-module',
     '@tresjs/nuxt',
-    '@formkit/auto-animate/nuxt'
-  ]
+    '@formkit/auto-animate/nuxt',
+    '@nuxt/devtools'
+  ],
+  tres: {
+    devtools: true
+  }
 })

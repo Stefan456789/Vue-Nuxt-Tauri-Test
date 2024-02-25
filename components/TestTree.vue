@@ -42,7 +42,7 @@ const [parent] = useAutoAnimate()
     <h3 class="text-xl mb-4">
       Click emojis to remove them.
     </h3>
-    <div>
+    <div class="w-max">
       <v-btn class="mr-4 px-1" @click="sortAsc">
         Sort A-Z ↑
       </v-btn>
@@ -57,7 +57,6 @@ const [parent] = useAutoAnimate()
       <li
         v-for="(item, index) in items"
         :key="item"
-        class="mx-4"
       >
         <v-sheet
           :elevation="2"
