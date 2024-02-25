@@ -6,6 +6,7 @@ export default defineNuxtConfig({
     '@nuxtjs/eslint-module',
     '@vueuse/nuxt',
     'vuetify-nuxt-module',
+    '@tresjs/nuxt',
     '@formkit/auto-animate/nuxt'
   ]
 })
