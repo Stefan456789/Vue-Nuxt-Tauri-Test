@@ -1,31 +1,29 @@
 <template>
-  <header>
-    <nav>
-      <ul class="flex px-8 pt-2 bg-gray-800 text-white text-lg w-full">
-        <li class="p-2">
-          <NuxtLink to="/">
-            Homepage
-          </NuxtLink>
-        </li>
-        <li class="p-2">
-          <NuxtLink to="/article/1">
-            Article 1
-          </NuxtLink>
-        </li>
-        <li class="p-2">
-          <NuxtLink to="/article/2">
-            Article 2
-          </NuxtLink>
-        </li>
-        <li class="p-2">
-          <NuxtLink to="/about">
-            About
-          </NuxtLink>
-        </li>
-        <li class="p-2 items-end">
-          <DarkModeButton />
-        </li>
-      </ul>
-    </nav>
-  </header>
+  <v-app-bar :elevation="2">
+    <v-app-bar-title>Test App</v-app-bar-title>
+    <NuxtLink to="/">
+      <v-btn>
+        Homepage
+      </v-btn>
+    </NuxtLink>
+    <NuxtLink to="/article/1">
+      <v-btn>
+        Article 1
+      </v-btn>
+    </NuxtLink>
+    <NuxtLink to="/article/2">
+      <v-btn>
+        Article 2
+      </v-btn>
+    </NuxtLink>
+    <NuxtLink to="/about">
+      <v-btn>
+        About
+      </v-btn>
+    </NuxtLink>
+
+    <template #append>
+      <DarkModeButton />
+    </template>
+  </v-app-bar>
 </template>

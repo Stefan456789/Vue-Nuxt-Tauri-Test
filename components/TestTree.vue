@@ -14,8 +14,7 @@ function sortDesc () {
   items.value.sort().reverse()
 }
 
-function moveUp (toMove: MouseEvent) {
-  const index = (toMove.target as HTMLElement).getAttribute('index') as unknown as number
+function moveUp (index: number) {
   if (index - 1 >= 0) {
     const temp = items.value[index]
     items.value[index] = items.value[index - 1]
@@ -23,8 +22,7 @@ function moveUp (toMove: MouseEvent) {
   }
 }
 
-function moveDown (toMove: MouseEvent) {
-  const index:number = +((toMove.target as HTMLElement).getAttribute('index') as unknown as number)
+function moveDown (index: number) {
   if (index + 1 < items.value.length) {
     const temp = items.value[index]
     items.value[index] = items.value[index + 1]
@@ -61,12 +59,18 @@ const [parent] = useAutoAnimate()
         :key="item"
         class="mx-4"
       >
-        <v-chip @click="removeItem(item)">
-          {{ item }}
-        </v-chip>
-
-        <v-btn :index="index" class="p-1 m-1" icon="mdi-arrow-up-thick" @click="moveUp" />
-        <v-btn :index="index" class="p-1 m-1" icon="mdi-arrow-down-thick" @click="moveDown" />
+        <v-sheet
+          :elevation="2"
+          class="rounded-lg max-w-max p-1 m-2 !inline-flex items-center"
+        >
+          <v-chip class="m-2" @click="removeItem(item)">
+            {{ item }}
+          </v-chip>
+          <span class="inline-flex justify-end grow m-1">
+            <v-btn icon="mdi-arrow-up-thick" class="rounded-e-0" @click="moveUp(index)" />
+            <v-btn icon="mdi-arrow-down-thick" class="rounded-s-0" @click="moveDown(index)" />
+          </span>
+        </v-sheet>
       </li>
     </ul>
   </div>

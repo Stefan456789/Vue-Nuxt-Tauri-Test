@@ -1,9 +1,9 @@
 <template>
-  <div class="h-screen w-screen dark:bg-black">
+  <v-app :key="useTheme().global.name.value">
     <AppHeader />
-    <div class="m-4 dark:text-white">
+    <v-main class="m-4 dark:text-white grow">
       <slot />
-    </div>
-    <AppFooter />
-  </div>
+    </v-main>
+    <AppFooter class="!grow-0" />
+  </v-app>
 </template>
