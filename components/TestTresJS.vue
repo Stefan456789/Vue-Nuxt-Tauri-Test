@@ -1,14 +1,5 @@
-<script setup>
-const exampleVideo = 'https://raw.githubusercontent.com/Tresjs/assets/main/textures/video-textures/useVideoTexture.mp4'
-const texture = ref()
-texture.value = await useVideoTexture(exampleVideo, { loop: true })
-
-const monkey = shallowRef()
-
+<script setup lang="ts">
 const isDark = useDark()
-watch(monkey, (value) => {
-  console.log(value.value) // Really for a log?!!! 😫
-})
 </script>
 
 <template>

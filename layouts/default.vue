@@ -1,3 +1,9 @@
+<script setup lang="ts">
+useEventListener('contextmenu', (event) => {
+  event.preventDefault()
+})
+</script>
+
 <template>
   <v-app :key="useTheme().global.name.value">
     <AppHeader />
