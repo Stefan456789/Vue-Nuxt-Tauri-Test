@@ -5,6 +5,7 @@ Look at the [Nuxt 3 documentation](https://nuxt.com/docs/getting-started/introdu
 ## Setup
 
 Make sure to install the dependencies:
+NodeJS:
 
 ```bash
 # npm
@@ -19,6 +20,8 @@ yarn install
 # bun
 bun install
 ```
+Tauri:
+See [Tauri Prerequisites](https://tauri.app/v1/guides/getting-started/prerequisites)
 
 ## Development App
 
